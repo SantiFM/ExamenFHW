@@ -1,0 +1,18 @@
+---
+
+- hosts: all
+  tasks:
+    - name: crear grupo en ambos
+      shell: addgroup=user enable=yes
+
+- hosts: node-one
+  tasks:
+    - name: crear usuario en nodo uno
+      shell: adduser=admin enable=yes
+
+- hosts: node-two
+  tasks:
+    - name: crear usuario en nodo dos
+      shell: adduser=dev enable=yes
+
+...
